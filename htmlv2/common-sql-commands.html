@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Wiki - Common SQL Commands</title>  
-    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css">  
+    <title>Wiki - Common SQL Commands</title>
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css">
     <meta charset="UTF-8">
     <meta name="description" content="Wiki Technical Documentation">
-    <meta name="keywords" content="linux system administration,unix system administration,linux sysadmin,unix sysadmin,wiki linux, 
+    <meta name="keywords" content="linux system administration,unix system administration,linux sysadmin,unix sysadmin,wiki linux,
     linux technical documentation,sed,cut,awk,find,ssh,pts,tty,iptables,docker,sql,git,github,go,golang,go golang,ssl,openssl,network,
     linux network,network management,linux network management,vi text editor,vi how to quit,text editor,ide,linux ide,linux resources,bash,
     shellscript,bash shellscript,shell scripting,loop,bash loop,colors in bash,color in bash,bash color,bash colors">
@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav id="navbar">
-        <header>Technical Documentation</header>
+        <header class="header-title">Technical Documentation</header>
         <ul>
           <li><a href="index.html#Introduction" class="nav-link" >Introduction</a></li>
           <li><a href="index.html#Bash_and_Shellscript" class="nav-link">Bash and Shellscript</a></li>
@@ -58,13 +58,15 @@ Show SQL users:<br>
                 <code>update user set authentication_string=PASSWORD("NewPassword") where User='UserName'; </code>
                 Or::<br>
                 <code>SET authentication_string FOR 'UserName'@'localhost' = PASSWORD('NewPassword');</code>
-                Create and Manage user:<br> 
+                Create and Manage user:<br>
                 Source: <a href="https://dev.mysql.com/doc/refman/5.7/en/grant.html">dev.mysql.com</a><br>
                 <code>CREATE USER 'UserName'@'localhost' IDENTIFIED BY 'mypass'; 
 GRANT ALL ON db1.* TO 'UserName'@'localhost';
 GRANT SELECT ON db2.invoice TO 'UserName'@'localhost';
 ALTER USER 'UserName'@'localhost' WITH MAX_QUERIES_PER_HOUR 90;</code>
                 </p>
+                <p>More useful basics at: <a href="https://www.freecodecamp.org/news/basic-sql-commands/" 
+                  target="_blank">freecodecamp.org/news/basic-sql-commands/</a><br>I'll try to add them here as I use them, as soon as I have the time.</p>
                 <p>SQL Dump All Databases for Backup (Export):<br/>
                 <code>mysqldump --all-databases > dump-$( date '+%Y-%m-%d_%H-%M-%S' ).sql -u root -p</code>
                 SQL Import a Backup:<br/>
@@ -81,7 +83,7 @@ cd /opt/database/backup-$(DATE -I)
 tar -czfv * > /opt/mysqlBackup-$(DATE -I).tar.gz
 /etc/init.d/mysql start</code></p>
     </article>
-</section>   
+</section>
 <footer id="footer">&copy; 2019 All Rights Reserved <a href="https://tsimon.me" alt="Thomas Simon Professional Website" title="tsimon.me">Thomas Simon</a> -
         <a href="https://github.com/t0m-a" target="_blank" title="t0m-a on GitHub">GitHub</a> - 
         <a href="https://hub.docker.com/u/simonthomas/" target="_blank" title="Thomas Simon repositories on Docker Hub">Docker Hub</a> - 

@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Wiki - Home</title>  
-    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css">  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120541560-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-120541560-3');
+</script>
+    <title>Wiki - Home</title>
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css">
     <meta charset="UTF-8">
     <meta name="description" content="Wiki Technical Documentation">
     <meta name="keywords" content="linux system administration,unix system administration,linux sysadmin,unix sysadmin,wiki linux, 
@@ -14,7 +22,7 @@
 </head>
 <body>
 <nav id="navbar">
-        <header>Technical Documentation</header>
+        <header class="header-title">Technical Documentation</header>
         <ul>
           <li><a href="#Introduction" class="nav-link" >Introduction</a></li>
           <li><a href="#Bash_and_Shellscript" class="nav-link">Bash and Shellscript</a></li>
@@ -44,11 +52,11 @@
             <li>Notes on Bash and shell scripting</li>
             <li>Memo on commonly used Linux and Unix standard tools</li>
             <li>Reminders on Git and GitHub commands</li>
-            <li>Basics in database administration like SQL or Influx commands.</li>    
+            <li>Basics in database administration like SQL or Influx commands.</li>
         </ul>
         You can view the full pages content by clicking on the "Read more" link in every section.</p><hr>
     </article>
-</section>   
+</section>
 
 <section class="main-section" id="Bash_and_Shellscript">
     <header>Bash and Shellscript</header><hr>
@@ -57,9 +65,9 @@
             Some of the subjects treated are loops, arguments, standard flows or colors in Bash. Example:
             <code>for i in $(cmd); do cmd $i; done</code>
             <code>for i in $(docker images | awk '{print $3}' | grep -v IMAGE); do echo $i; done</code></p>
-            <p><a href="bash.html" title="Bash and Shellscripts">Read more</a>...</p><hr> 
+            <p><a class="read-more-button" href="bash.html" title="Bash and Shellscripts">Read more</a></p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="Linux_and_Unix_Tools">
     <header>Linux and Unix Tools</header><hr>
@@ -67,9 +75,9 @@
         <p>Memo about mostly standard Linux and Unix tools commonly used in system administration. Example
             <code>sed, echo, cut, grep, find, set, awk, rename, shred, rsync, rclone, etc..</code>
         </p>
-        <p><a href="linuxtools.html" title="Linux and Unix Tools">Read more</a>...</p><hr>
+        <p><a class="read-more-button" href="linuxtools.html" title="Linux and Unix Tools">Read more</a></p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="Vi_Basics">
     <header>Vi Basics</header><hr>
@@ -84,13 +92,13 @@
     g goto BOF
     O addline above
     o addline below
-    / = search 
+    / = search
     esc+U = ctrl+Z
     d deletes a line
     d+$ deletes a line until its end</code>
     </p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="Useful_Commands">
     <header>Useful Commands</header><hr>
@@ -101,9 +109,9 @@
             Watching a reverse proxy access_log, counting requests:
             <code>cd /logs &&  for s in `ls -lrt *_access_log | grep " $(date "+%b %d")" | grep -v servername| awk '{print $9}'`; do flog $s; done</code>
         </p>
-        <p><a href="usefulcommands.html" title="Useful Commands">Read more</a>...</p><hr> 
+        <p><a class="read-more-button" href="usefulcommands.html" title="Useful Commands">Read more</a></p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="SSH,_PTS_and_TTY">
     <header>SSH, PTS and TTY</header><hr>
@@ -111,48 +119,49 @@
             The terminal connects to the console where the shell is presented.<br>
             A TTY is a teletypewriter. It is essentially the equivalent of the console port but is often virtualized in software. 
             If you jump to a different virtual console on your Linux machine using ctrl+alt+f1 to 12 combination and login in, 
-            you can see the multiple consoles with logged in users by running the who command.<br> 
-            Then there are PTS devices which are Pseudo Terminal Slaves, a virtual device of sorts. 
+            you can see the multiple consoles with logged in users by running the who command.<br>
+            Then there are PTS devices which are Pseudo Terminal Slaves, a virtual device of sorts.
             They are a form of TTY, but one that is emulated to allow a TTY connection over a network or some other means. 
             SSH and Telnet are good examples of programs that use PTS devices.</p>
-            <p><a href="ssh-pts-tty.html" title="SSH, PTS and TTY">Read more</a>...</p><hr>
+            <p><a class="read-more-button" href="ssh-pts-tty.html" title="SSH, PTS and TTY">Read more</a></p><hr>
     </article>
-</section>   
+</section>
 
 <section class="main-section" id="Iptables_and_Network_Management">
     <header>Iptables and Network Management</header><hr>
     <article><p>This is a collection of the commands I use all the time to manage firewalls and network on servers.</p>
-        <p><a href="iptables-and-network-management.html" title="Iptables and Network Management">Read more</a>...</p><hr>
+        <p><a class="read-more-button" href="iptables-and-network-management.html" 
+        title="Iptables and Network Management">Read more</a></p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="Common_SQL_Commands">
     <header>Common SQL Commands</header><hr>
     <article><p>I'm always looking for my SQL most frequently used commands. I compiled them in this page, and added a few interesting things when
         managing SQL servers or SQL like databases like InfluxDB for instance.</p>
-        <p><a href="common-sql-commands.html" title="Common SQL Commands">Read more</a>...</p><hr>
+        <p><a class="read-more-button" href="common-sql-commands.html" title="Common SQL Commands">Read more</a></p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="SSL_Tips_and_Tricks">
     <header>SSL Tips and Tricks</header><hr>
     <article><p>This section regroups CLI commands for Openssl like how to generate a strong Diffie-Hellman private key, 
         connecting SSL Client to a server in debug mode and getting certificate and encryption information or applying HTTPS-HSTS configuration to nginx.</p>
-        <p><a href="ssl-tips-and-tricks.html" title="SSL Tips and Tricks">Read more</a>...</p><hr>
+        <p><a class="read-more-button" href="ssl-tips-and-tricks.html" title="SSL Tips and Tricks">Read more</a></p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="Docker_Commands">
     <header>Docker Commands</header><hr>
     <article><p>I followed two trainings on Docker administration and advanced administration, these are my notes and memo on the topic</p>
-        <p><a href="docker-administration.html" title="Docker Administration">Read more</a>...</p><hr>
+        <p><a class="read-more-button" href="docker-administration.html" title="Docker Administration">Read more</a></p><hr>
     </article>
-</section> 
+</section>
 
 <section class="main-section" id="Git_and_GitHub_Memo">
     <header>Git and GitHub Memo</header><hr>
     <article><p>A handy reminder of the Git most basics (and less too) like how to clean up folders both on local and remote branch...</p>
-        <p><a href="git-and-guthub-memo.html" title="Git and GitHub Memo">Read more</a>...</p><hr>
+        <p><a class="read-more-button" href="git-and-guthub-memo.html" title="Git and GitHub Memo">Read more</a></p><hr>
     </article>
 </section>
 
@@ -163,7 +172,7 @@
         And I am still in the process of going through this great cursus on Google's Go language by 
         <a href="https://www.udemy.com/course/learn-how-to-code/#instructor-1" target="_blank" title="Todd McLeod's instructor profile on Udemy">Todd McLeod</a>.<br>
         I can only recommend it so much, this guy is awesome and a very good instructor! This page resumes my notes of the begining of his class.</p>
-    <p><a href="go-golang.html" title="Go (Golang)">Read more</a>...</p><hr>
+    <p><a class="read-more-button" href="go-golang.html" title="Go (Golang)">Read more</a></p><hr>
     </article>
 </section>
 
@@ -193,8 +202,8 @@ ldapsearch -D "cn=LDAP DIRECTORY SERVER" -w PASSWD -v -p PORT -b "o=ORGANISATION
 EXAMPLE ==> WHERE we search ==>  o=ORGANISATION,ou=ORGANISATIONAL_UNIT
 </code>
 </p>
-<p><a href="/wiki/ldap/ldap.html" title="LDAP and Open LDAP Management and Administration">Read more</a>... 
-    (The rest of this information is password protected.)</p> 
+<p><a class="read-more-button" href="/wiki/ldap/ldap.html" title="LDAP and Open LDAP Management and Administration">Read more</a> 
+    (The rest of this information is password protected.)</p>
 </article>
 </section>
 <footer id="footer">&copy; 2019 All Rights Reserved <a href="https://tsimon.me" alt="Thomas Simon Professional Website" title="tsimon.me">Thomas Simon</a> -

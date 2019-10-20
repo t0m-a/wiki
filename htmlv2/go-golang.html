@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Wiki - Go (Golang)</title>  
-    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css">  
+    <title>Wiki - Go (Golang)</title>
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css">
     <meta charset="UTF-8">
     <meta name="description" content="Wiki Technical Documentation">
     <meta name="keywords" content="linux system administration,unix system administration,linux sysadmin,unix sysadmin,wiki linux, 
@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav id="navbar">
-        <header>Technical Documentation</header>
+        <header class="header-title">Technical Documentation</header>
         <ul>
           <li><a href="index.html#Introduction" class="nav-link" >Introduction</a></li>
           <li><a href="index.html#Bash_and_Shellscript" class="nav-link">Bash and Shellscript</a></li>
@@ -527,7 +527,8 @@ func reverseTwo(s string) string {
                 /!\ VAR TYPE /!\ POINTER TO AN INT *int which means we point to the memaddress where the VALUE of b is stored.<br>
                 <code>a := 43
                 var bee *int = &a</code>
-                <code>If we declare bee as = &a - bee will be automatically be inferred from context as of type *int (pointer to an int) *int -- the * is part of the type -- bee is of type *int
+                <code>If we declare bee as = &a - bee will be automatically be inferred from context as of type *int (pointer to an int) 
+                *int -- the * is part of the type -- bee is of type *int
                 
                 Here, we are REFERENCING a VALUE (making a pointer to its memaddress)
                 
